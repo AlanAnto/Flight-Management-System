@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Sign Up
+        </title>
+        <style>
+            body {
+            background-image: url('bg.jpg')
+            }
+        </style>
+    </head>
+    <body align="center">
+        <br><br><br>
+        <h1>WELCOME</h1>
+        <span id="Name"></span>
+        <h2>Your address is : </h2>
+        <span id="add"></span> 
+        <br><br>
+        <input type="button" onclick="javascript:showData()" value="Show Data" style="font-size:22pt ;background-color:rgb(0, 128, 255);border-radius: 10cm;border-color:rgb(0, 128, 255) ;">
+        <script>
+            function showData()
+            {
+                var fname=localStorage.getItem('fname');
+                var lname=localStorage.getItem('lname');
+                var address=localStorage.getItem('address');
+                document.getElementById("Name").innerHTML=fname+lname;
+                document.getElementById("add").innerHTML=address;
+            }
+        </script>
+    </body>
